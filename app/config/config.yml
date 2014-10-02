@@ -72,4 +72,4 @@ swiftmailer:
     spool:     { type: memory }
 
 rav_some:
-    test_conf: "default_val"
+    test_conf: "%partner.default_val%"
