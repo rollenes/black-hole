@@ -1,0 +1,3 @@
+rav_some_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RavSomeBundle:Default:index }

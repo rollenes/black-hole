@@ -1,0 +1,4 @@
+rav_some:
+    resource: "@RavSomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
