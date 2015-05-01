@@ -9,7 +9,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return $this->render('RavSomeBundle:Default:index.html.twig', array(
-                                    'name' => $this->container->getParameter('rav_some.test_conf')
+                                    'name' => $this->container->get('rav_config.partner')->getDomain()
                                 )
                             );
     }

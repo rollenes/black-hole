@@ -1,5 +1,6 @@
 <?php
 
+use Rav\ConfigBundle\Service\Partner;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
@@ -25,6 +26,10 @@ require_once __DIR__.'/../app/AppKernel.php';
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
 $request = Request::createFromGlobals();
+
+$kernel->boot();
+$kernel->getContainer()->set('rav_config.partner', new  Partner($request->getHost()));
+
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);

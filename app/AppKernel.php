@@ -32,14 +32,5 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
-
-        $loader->load(function(\Symfony\Component\DependencyInjection\ContainerBuilder $container) {
-
-            $params = $this->getContainerBuilder()->getParameterBag();
-
-            $this->getContainer()->get('');
-
-            $container->setParameter('partner.default_val', 'Registered in AppKernel :)');
-        });
     }
 }

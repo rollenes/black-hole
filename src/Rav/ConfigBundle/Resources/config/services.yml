@@ -1,4 +1,3 @@
 services:
-#    rav_config.example:
-#        class: Rav\ConfigBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    rav_config.partner:
+        synthetic: true
