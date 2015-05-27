@@ -19,7 +19,6 @@ class AppKernel extends Kernel
             new Rav\SomeBundle\RavSomeBundle(),
             new Rav\ConfigBundle\RavConfigBundle(),
             new Rav\ServiceBundle\RavServiceBundle(),
-            new Rav\PartnerScopeBundle\RavPartnerScopeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
