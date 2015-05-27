@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Rav\SomeBundle\RavSomeBundle(),
             new Rav\ConfigBundle\RavConfigBundle(),
+            new Rav\ServiceBundle\RavServiceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

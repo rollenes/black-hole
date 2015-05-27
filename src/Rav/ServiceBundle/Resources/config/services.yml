@@ -1,0 +1,12 @@
+services:
+    rav_service.container:
+        class: Rav\ServiceBundle\Service\Scope
+        scope: container
+
+    rav_service.prototype:
+        class: Rav\ServiceBundle\Service\Scope
+        scope: prototype
+
+    rav_service.custom:
+        class: Rav\ServiceBundle\Service\Scope
+        scope: custom
