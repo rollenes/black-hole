@@ -23,32 +23,13 @@ class CustomScopeCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->enterScope($output);
-
-        $this->getService($output);
+        $this->getServiceTwiceInCustomScope($input, $output);
 
         $this->pause($input, $output);
 
-        $this->getService($output);
-
-        $this->pause($input, $output);
-
-        $this->leaveScope($output);
-
-        $this->pause($input, $output);
-
-        $this->enterScope($output);
-
-        $this->getService($output);
-
-        $this->pause($input, $output);
-
-        $this->getService($output);
-
-        $this->pause($input, $output);
-
-        $this->leaveScope($output);
+        $this->getServiceTwiceInCustomScope($input, $output);
     }
+
 
     private function getService(OutputInterface $output)
     {
@@ -90,5 +71,24 @@ class CustomScopeCommand extends ContainerAwareCommand
     {
         $this->getContainer()->leaveScope('custom');
         $output->writeln('Leaving custom scope');
+    }
+
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     */
+    private function getServiceTwiceInCustomScope(InputInterface $input, OutputInterface $output)
+    {
+        $this->enterScope($output);
+
+        $this->getService($output);
+
+        $this->pause($input, $output);
+
+        $this->getService($output);
+
+        $this->pause($input, $output);
+
+        $this->leaveScope($output);
     }
 } 
