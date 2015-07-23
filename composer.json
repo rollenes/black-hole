@@ -4,7 +4,12 @@
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
-        "psr-0": { "": "src/", "SymfonyStandard": "app/" }
+        "psr-0": { "": "src/", "SymfonyStandard": "app/" },
+        "psr-4": {
+            "Rav\\Domain\\" : "src/Domain",
+            "Rav\\Domain\\Extension\\" : "src/Extension/Domain",
+            "Rav\\Extension\\ExtensionBundle\\" : "src/Extension/ExtensionBundle"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -20,7 +25,8 @@
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "phpspec/phpspec": "^2.2"
     },
     "scripts": {
         "post-root-package-install": [

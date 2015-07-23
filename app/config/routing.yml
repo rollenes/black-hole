@@ -1,7 +1,3 @@
-rav_partner_scope:
-    resource: "@RavPartnerScopeBundle/Resources/config/routing.yml"
-    prefix:   /
-
 rav_service:
     resource: "@RavServiceBundle/Resources/config/routing.yml"
     prefix:   /
