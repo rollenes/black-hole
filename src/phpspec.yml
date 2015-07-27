@@ -1,0 +1,10 @@
+suites:
+    domain_suite:
+        namespace: Rav\Domain
+        psr4_prefix: Rav\Domain
+        spec_path: Domain
+
+    extension_domain_suite:
+        namespace: Rav\Domain\Extension
+        psr4_prefix: Rav\Domain\Extension
+        spec_path: Extension/Domain
