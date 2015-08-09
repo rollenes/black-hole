@@ -20,6 +20,11 @@ class AppKernel extends Kernel
             new Rav\ConfigBundle\RavConfigBundle(),
             new Rav\ServiceBundle\RavServiceBundle(),
             new Rav\Extension\ExtensionBundle\ExtensionBundle(),
+
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+
+            new Rav\BlockBundle\RavBlockBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,0 +1,8 @@
+services:
+  rav.block.service.randoms:
+    class: Rav\BlockBundle\Block\Randoms
+    arguments:
+      - randoms
+      - @templating
+    tags:
+      - { name: sonata.block }
